@@ -1,3 +1,4 @@
+import { Book } from "@/components";
 import { getBooks } from "@/sanity/cms";
 import Link from "next/link";
 
@@ -7,16 +8,7 @@ export default async function Home() {
   return (
     <div>
       {books.map((book) => {
-        return (
-          <div key={book._id}>
-            <h2>{book.bookTitle}</h2>
-            {!book.publisher && book.authors
-              ? book.authors.map((author) => <p key={author}>{author}</p>)
-              : null}
-            {book.publisher ? <p>{book.publisher}</p> : null}
-            {book.color ? book.color.hex : null}
-          </div>
-        );
+        return <Book key={book._id} book={book} />;
       })}
     </div>
   );
