@@ -1,4 +1,4 @@
-import { ColorSchemaType } from "@sanity/color-input";
+import { ColorInputProps } from "@sanity/color-input";
 import { PortableTextBlock } from "next-sanity";
 
 type Link = {
@@ -6,16 +6,25 @@ type Link = {
   url: string;
 };
 
+type SanityColor = {
+  _type: "color";
+  alpha: number;
+  hex: string;
+  hsl: { h: number; s: number; l: number; a: number };
+  hsv: { h: number; s: number; v: number; a: number };
+  rgb: { r: number; g: number; b: number; a: number };
+};
+
 export type Book = {
   _id: string;
   _createdAt: string;
   authors?: string[];
   bookTitle: string;
-  color: ColorSchemaType;
+  color: SanityColor;
   cover?: string;
   description: PortableTextBlock[];
   publisher?: string;
   slug: string;
   url: string;
-  whereToBuy: Link[];
+  whereToBuy?: Link[];
 };

@@ -1,4 +1,5 @@
 import { getBooks } from "@/sanity/cms";
+import Link from "next/link";
 
 export default async function Home() {
   const books = await getBooks();
@@ -13,6 +14,7 @@ export default async function Home() {
               ? book.authors.map((author) => <p key={author}>{author}</p>)
               : null}
             {book.publisher ? <p>{book.publisher}</p> : null}
+            {book.color ? book.color.hex : null}
           </div>
         );
       })}
