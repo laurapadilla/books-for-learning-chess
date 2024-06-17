@@ -2,21 +2,17 @@
 /**
  * This configuration is used to for the Sanity Studio that’s mounted on the `/app/studio/[[...tool]]/page.tsx` route
  */
+import { colorInput } from '@sanity/color-input';
 import { visionTool } from '@sanity/vision';
 import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
-
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
-import { apiVersion, dataset, projectId } from './sanity/env';
+import { apiVersion, dataset, projectId, useCdn } from './sanity/env';
 import { schema } from './sanity/schema';
-import { colorInput } from '@sanity/color-input';
 
 export default defineConfig({
   basePath: '/studio',
-  projectId,
   dataset,
-  // Add and edit the content schema in the './sanity/schema' folder
-  schema,
   plugins: [
     colorInput(),
     structureTool(),
@@ -24,4 +20,8 @@ export default defineConfig({
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
   ],
+  projectId,
+  // Add and edit the content schema in the './sanity/schema' folder
+  schema,
+  useCdn,
 });
