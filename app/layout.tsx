@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Newsreader } from 'next/font/google';
+import 'minireset.css';
 
 const newsreader = Newsreader({ subsets: ['latin'] });
 
