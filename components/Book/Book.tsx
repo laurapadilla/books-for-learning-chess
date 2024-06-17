@@ -1,4 +1,4 @@
-import { Book as BookType } from "@/types/book";
+import { Book as BookType } from '@/types/book';
 
 type BookProps = {
   book: BookType;

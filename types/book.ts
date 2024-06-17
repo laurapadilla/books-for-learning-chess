@@ -1,5 +1,5 @@
-import { ColorInputProps } from "@sanity/color-input";
-import { PortableTextBlock } from "next-sanity";
+import { ColorInputProps } from '@sanity/color-input';
+import { PortableTextBlock } from 'next-sanity';
 
 type Link = {
   title: string;
@@ -7,7 +7,7 @@ type Link = {
 };
 
 type SanityColor = {
-  _type: "color";
+  _type: 'color';
   alpha: number;
   hex: string;
   hsl: { h: number; s: number; l: number; a: number };

@@ -1,6 +1,5 @@
-import { Book } from "@/components";
-import { getBooks } from "@/sanity/cms";
-import Link from "next/link";
+import { Book } from '@/components';
+import { getBooks } from '@/sanity/cms';
 
 export default async function Home() {
   const books = await getBooks();

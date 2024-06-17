@@ -1,3 +1,83 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@next/next/recommended"
+  ],
+  "ignorePatterns": ["next.config.js"],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "jsx-a11y", "@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/array-type": ["error", { "default": "array-simple" }],
+    "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+    "@typescript-eslint/no-unnecessary-condition": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_" }
+    ],
+    "@typescript-eslint/prefer-nullish-coalescing": "error",
+    "@typescript-eslint/prefer-optional-chain": "error",
+    "eqeqeq": "error",
+    "import/no-namespace": ["error", { "ignore": ["react", "*.css"] }],
+    "import/order": [
+      "error",
+      {
+        "alphabetize": { "caseInsensitive": true, "order": "asc" },
+        "groups": [
+          "builtin",
+          ["internal", "external"],
+          ["parent", "sibling"],
+          "index",
+          "object"
+        ],
+        "newlines-between": "never"
+      }
+    ],
+    "no-implicit-coercion": ["error", { "boolean": false }],
+    "react/function-component-definition": [
+      "error",
+      { "namedComponents": "function-declaration" }
+    ],
+    "react/jsx-no-leaked-render": ["error", { "validStrategies": ["ternary"] }],
+    "react/jsx-no-useless-fragment": "error",
+    "react/jsx-sort-props": "error",
+    "react/no-unused-prop-types": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/self-closing-comp": ["error", { "component": true, "html": true }],
+    "sort-imports": [
+      "error",
+      {
+        "allowSeparatedGroups": false,
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+      }
+    ],
+    "sort-keys": ["error", "asc", { "caseSensitive": false, "natural": true }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": true,
+      "typescript": true
+    },
+    "react": { "version": "detect" }
+  }
 }
