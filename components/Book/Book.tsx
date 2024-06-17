@@ -12,7 +12,7 @@ export function Book({ book }: BookProps) {
         ? book.authors.map((author) => <p key={author}>{author}</p>)
         : null}
       {book.publisher ? <p>{book.publisher}</p> : null}
-      {book.color ? book.color.hex : null}
+      {book.color.hex}
     </div>
   );
 }

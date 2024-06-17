@@ -7,7 +7,7 @@ export default async function Home() {
   return (
     <div>
       {books.map((book) => {
-        return <Book key={book._id} book={book} />;
+        return <Book book={book} key={book._id} />;
       })}
     </div>
   );

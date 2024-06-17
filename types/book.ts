@@ -1,4 +1,3 @@
-import { ColorInputProps } from '@sanity/color-input';
 import { PortableTextBlock } from 'next-sanity';
 
 type Link = {
