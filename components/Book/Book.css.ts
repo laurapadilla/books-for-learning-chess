@@ -1,10 +1,18 @@
 import { style } from '@vanilla-extract/css';
 
 export const book = style({
-  border: '1px solid #ccc',
   display: 'flex',
   flexDirection: 'column',
   height: '385px',
   justifyContent: 'space-between',
   padding: '1rem',
+});
+
+export const bookTitle = style({
+  fontSize: '24px',
+});
+
+export const authors = style({
+  fontSize: '20px',
+  fontStyle: 'italic',
 });

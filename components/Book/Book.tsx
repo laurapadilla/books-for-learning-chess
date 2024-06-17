@@ -26,7 +26,11 @@ export function Book({ book }: BookProps) {
       <h2>{book.bookTitle}</h2>
       <div>
         {book.authors
-          ? book.authors.map((author) => <p key={author}>{author}</p>)
+          ? book.authors.map((author) => (
+              <p className={styles.authors} key={author}>
+                {author}
+              </p>
+            ))
           : null}
       </div>
       {/* {book.publisher ? <p>{book.publisher}</p> : null} */}
