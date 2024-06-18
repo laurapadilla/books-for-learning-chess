@@ -18,6 +18,5 @@ export async function getBooks(): Promise<Book[]> {
     color,
     "cover": cover.asset->url,
     whereToBuy, 
-    url
     }`);
 }

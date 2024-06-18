@@ -13,6 +13,6 @@ export const bookTitle = style({
 });
 
 export const authors = style({
-  fontSize: '20px',
+  fontSize: '24px',
   fontStyle: 'italic',
 });

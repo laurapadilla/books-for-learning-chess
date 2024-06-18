@@ -4,7 +4,9 @@ import 'minireset.css';
 
 const newsreader = Newsreader({
   display: 'swap',
+  style: ['italic', 'normal'],
   subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
 });
 
 export const metadata: Metadata = {

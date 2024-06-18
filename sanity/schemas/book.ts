@@ -1,7 +1,4 @@
 export const book = {
-  name: 'book',
-  title: 'Books',
-  type: 'document',
   fields: [
     {
       name: 'bookTitle',
@@ -10,25 +7,25 @@ export const book = {
     },
     {
       name: 'slug',
-      title: 'Slug',
-      type: 'slug',
       options: {
         source: 'bookTitle',
       },
+      title: 'Slug',
+      type: 'slug',
     },
     {
       name: 'authors',
+      of: [{ type: 'string' }],
       title: 'Authors',
       type: 'array',
-      of: [{ type: 'string' }],
     },
     {
       name: 'description',
+      of: [
+        { styles: [{ title: 'Indented', value: 'indented' }], type: 'block' },
+      ],
       title: 'Description',
       type: 'array',
-      of: [
-        { type: 'block', styles: [{ title: 'Indented', value: 'indented' }] },
-      ],
     },
     {
       name: 'publisher',
@@ -41,9 +38,6 @@ export const book = {
       type: 'color',
     },
     {
-      name: 'cover',
-      title: 'Cover',
-      type: 'image',
       fields: [
         {
           name: 'alt',
@@ -51,24 +45,25 @@ export const book = {
           type: 'string',
         },
       ],
+      name: 'cover',
+      title: 'Cover',
+      type: 'image',
     },
     {
       name: 'whereToBuy',
-      title: 'Where to Buy',
-      type: 'array',
       of: [
         {
-          type: 'reference',
           to: [
             { type: 'link' }, // reference to 'link' schema
           ],
+          type: 'reference',
         },
       ],
-    },
-    {
-      name: 'url',
-      title: 'URL',
-      type: 'url',
+      title: 'Where to Buy',
+      type: 'array',
     },
   ],
+  name: 'book',
+  title: 'Books',
+  type: 'document',
 };

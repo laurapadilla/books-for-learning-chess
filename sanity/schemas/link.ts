@@ -1,7 +1,4 @@
 export const link = {
-  name: 'link',
-  title: 'Links',
-  type: 'document',
   fields: [
     {
       name: 'title',
@@ -14,4 +11,7 @@ export const link = {
       type: 'url',
     },
   ],
+  name: 'link',
+  title: 'Links',
+  type: 'document',
 };

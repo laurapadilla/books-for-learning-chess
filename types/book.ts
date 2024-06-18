@@ -24,6 +24,5 @@ export type Book = {
   description: PortableTextBlock[];
   publisher?: string;
   slug: string;
-  url: string;
   whereToBuy?: Link[];
 };

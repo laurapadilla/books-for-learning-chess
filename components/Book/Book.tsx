@@ -23,7 +23,7 @@ export function Book({ book }: BookProps) {
         color: getTextColor(book.color.hex),
       }}
     >
-      <h2>{book.bookTitle}</h2>
+      <h2 className={styles.bookTitle}>{book.bookTitle}</h2>
       <div>
         {book.authors
           ? book.authors.map((author) => (
