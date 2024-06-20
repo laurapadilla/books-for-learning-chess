@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import { Newsreader } from 'next/font/google';
 import 'minireset.css';
+import '@/styles/globals.css';
 
 const newsreader = Newsreader({
   display: 'swap',
   style: ['italic', 'normal'],
   subsets: ['latin'],
+  variable: '--font-serif',
   weight: ['300', '400', '500', '600'],
 });
 

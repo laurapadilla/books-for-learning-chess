@@ -5,7 +5,9 @@ export const book = style({
   flexDirection: 'column',
   height: '385px',
   justifyContent: 'space-between',
+  maxWidth: '255px',
   padding: '1rem',
+  textDecoration: 'none',
 });
 
 export const bookTitle = style({

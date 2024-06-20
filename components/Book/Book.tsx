@@ -1,4 +1,5 @@
 import { Book as BookType } from '@/types/book';
+import Link from 'next/link';
 import * as styles from './Book.css';
 
 type BookProps = {
@@ -16,8 +17,9 @@ export function Book({ book }: BookProps) {
     return brightness >= 128 ? 'black' : 'white';
   }
   return (
-    <div
+    <Link
       className={styles.book}
+      href={`/books/${book.slug}`}
       style={{
         background: book.color.hex,
         color: getTextColor(book.color.hex),
@@ -34,6 +36,6 @@ export function Book({ book }: BookProps) {
           : null}
       </div>
       {/* {book.publisher ? <p>{book.publisher}</p> : null} */}
-    </div>
+    </Link>
   );
 }

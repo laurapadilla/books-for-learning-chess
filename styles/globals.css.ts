@@ -1,4 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css';
+import { vars } from './theme.css';
 
 globalStyle('html, body', {
   WebkitFontSmoothing: 'antialiased',
@@ -33,7 +34,9 @@ export const blurbContainer = style({
 });
 
 export const blurb = style({
-  fontFamily: 'Newsreader, serif',
-  maxWidth: '55ch',
+  fontFamily: vars.font.serif,
+  fontSize: '20px',
+  lineHeight: '120%',
+  maxWidth: '500px',
   textIndent: '24px',
 });
