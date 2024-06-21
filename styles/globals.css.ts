@@ -14,10 +14,6 @@ globalStyle('a', {
   textUnderlineOffset: '0.2rem',
 });
 
-export const container = style({
-  padding: '2rem',
-});
-
 export const booksContainer = style({
   display: 'grid',
   gap: '1rem',

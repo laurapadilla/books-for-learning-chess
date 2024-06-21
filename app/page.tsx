@@ -1,4 +1,4 @@
-import { Book, Header } from '@/components';
+import { Book, Container, Header } from '@/components';
 import { getBooks } from '@/sanity/cms';
 import * as styles from '@/styles/globals.css';
 import Link from 'next/link';
@@ -7,7 +7,7 @@ export default async function Home() {
   const books = await getBooks();
 
   return (
-    <main className={styles.container}>
+    <Container>
       <Header />
       <section className={styles.blurbContainer}>
         <h2 className={styles.blurb}>
@@ -32,6 +32,6 @@ export default async function Home() {
           return <Book book={book} key={book._id} />;
         })}
       </div>
-    </main>
+    </Container>
   );
 }

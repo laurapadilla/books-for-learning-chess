@@ -1,4 +1,4 @@
-import { Book, Header } from '@/components';
+import { Book, Container, Header } from '@/components';
 import { getBook } from '@/sanity/cms';
 
 type Props = {
@@ -12,9 +12,9 @@ export default async function BookPage({ params }: Props) {
   const book = await getBook(slug);
 
   return (
-    <main>
+    <Container>
       <Header />
       <Book book={book} />
-    </main>
+    </Container>
   );
 }

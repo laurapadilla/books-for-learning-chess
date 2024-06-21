@@ -4,6 +4,7 @@ export const header = style({
   alignItems: 'center',
   display: 'flex',
   justifyContent: 'space-between',
+  marginBottom: '2rem',
 });
 
 export const nav = style({
