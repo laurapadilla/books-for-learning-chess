@@ -1,25 +1,14 @@
-import { Book } from '@/components';
-import { getBooks, getSiteSettings } from '@/sanity/cms';
+import { Book, Header } from '@/components';
+import { getBooks } from '@/sanity/cms';
 import * as styles from '@/styles/globals.css';
 import Link from 'next/link';
 
 export default async function Home() {
   const books = await getBooks();
-  const siteSettings = await getSiteSettings();
 
   return (
     <main className={styles.container}>
-      <header className={styles.header}>
-        <h1>{siteSettings.title}</h1>
-        <nav>
-          {siteSettings.navLinks.map((link) => (
-            <Link href={link.url} key={link.url}>
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-      </header>
-
+      <Header />
       <section className={styles.blurbContainer}>
         <h2 className={styles.blurb}>
           Best books for learning chess is a collection of materials that have

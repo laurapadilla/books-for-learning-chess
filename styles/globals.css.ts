@@ -24,11 +24,6 @@ export const booksContainer = style({
   gridTemplateColumns: 'repeat(auto-fill, minmax(255px, 1fr))',
 });
 
-export const header = style({
-  display: 'flex',
-  justifyContent: 'space-between',
-});
-
 export const blurbContainer = style({
   margin: '2rem 0',
 });
