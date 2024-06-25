@@ -17,3 +17,8 @@ export const navLink = style({
   fontFamily: vars.font.sans,
   textDecoration: 'none',
 });
+
+export const title = style({
+  fontSize: '24px',
+  textDecoration: 'none',
+});
