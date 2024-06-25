@@ -1,6 +1,7 @@
 import { Book, Container, Header } from '@/components';
 import { getBook, getBooks } from '@/sanity/cms';
 import { PortableText, PortableTextComponents } from '@portabletext/react';
+import Link from 'next/link';
 import * as styles from './bookPage.css';
 
 type Props = {
@@ -36,6 +37,7 @@ export default async function BookPage({ params }: Props) {
   return (
     <Container>
       <Header />
+      <Link href="/">Back</Link>
       <section className={styles.section}>
         <Book book={book} />
         <div>
@@ -45,7 +47,7 @@ export default async function BookPage({ params }: Props) {
           />
         </div>
         <div>
-          <h3>Other Books</h3>
+          <h2>Other Books</h2>
           {/* display a list of 4 books from sanity */}
           {generateBooks()}
         </div>
