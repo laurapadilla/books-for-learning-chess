@@ -1,16 +1,18 @@
 import { globalStyle, style } from '@vanilla-extract/css';
-import { vars } from './theme.css';
+import { helvetica, vars } from './theme.css';
 
 globalStyle('html, body', {
   WebkitFontSmoothing: 'antialiased',
 });
 
 globalStyle('h1, h2', {
-  fontFamily: 'Helvetica Neue, sans-serif',
+  fontFamily: helvetica,
 });
 
 globalStyle('a', {
   color: 'inherit',
+  fontFamily: 'inherit',
+  textDecorationThickness: '0.05em',
   textUnderlineOffset: '0.2rem',
 });
 

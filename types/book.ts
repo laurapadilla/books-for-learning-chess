@@ -1,7 +1,7 @@
 import { PortableTextBlock } from '@portabletext/react';
 
 type Link = {
-  title: string;
+  label: string;
   url: string;
 };
 

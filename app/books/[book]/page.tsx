@@ -26,9 +26,9 @@ export default async function BookPage({ params }: Props) {
       .filter((b) => b._id !== book._id)
       .slice(0, 4)
       .map((b) => (
-        <ul key={b._id}>
-          <li>{b.bookTitle}</li>
-        </ul>
+        <Link className={styles.otherBooksLink} href={b.slug} key={b._id}>
+          {b.bookTitle}
+        </Link>
       ));
   }
 
@@ -37,18 +37,34 @@ export default async function BookPage({ params }: Props) {
   return (
     <Container>
       <Header />
-      <Link href="/">Back</Link>
+      <Link href="/">{'<'} Back</Link>
       <section className={styles.section}>
-        <Book book={book} />
-        <div>
-          <PortableText
-            components={descriptionComponents}
-            value={book.description}
-          />
+        <div className={styles.bookInfoContainer}>
+          <div className={styles.bookAndLinksContainer}>
+            <Book book={book} />
+            <article className={styles.whereToBuyList}>
+              {book.whereToBuy
+                ? book.whereToBuy.map((link, idx) => (
+                    <Link
+                      className={styles.whereToBuyLink}
+                      href={link.url}
+                      key={`${link.label}-${idx}`}
+                    >
+                      {link.label}
+                    </Link>
+                  ))
+                : null}
+            </article>
+          </div>
+          <div className={styles.portableText}>
+            <PortableText
+              components={descriptionComponents}
+              value={book.description}
+            />
+          </div>
         </div>
-        <div>
-          <h2>Other Books</h2>
-          {/* display a list of 4 books from sanity */}
+        <div className={styles.otherBooksList}>
+          <h2 className={styles.otherBooksHeading}>Other Books</h2>
           {generateBooks()}
         </div>
       </section>

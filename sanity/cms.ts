@@ -18,7 +18,6 @@ export async function getBooks(): Promise<Book[]> {
     publisher,
     color,
     "cover": cover.asset->url,
-    whereToBuy, 
     }`);
 }
 
@@ -34,7 +33,7 @@ export async function getBook(slug: string): Promise<Book> {
     publisher,
     color,
     "cover": cover.asset->url,
-    whereToBuy, 
+    "whereToBuy": whereToBuy[]->{label, url},
     }`,
     { slug },
   );

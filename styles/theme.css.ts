@@ -1,8 +1,14 @@
-import { createTheme } from '@vanilla-extract/css';
+import { createTheme, globalFontFace } from '@vanilla-extract/css';
+
+export const helvetica = 'GlobalHelvetica';
+
+globalFontFace(helvetica, {
+  src: 'local("Helvetica Neue")',
+});
 
 export const [theme, vars] = createTheme({
   font: {
-    sans: 'Helvetica Neue, sans-serif',
+    sans: helvetica,
     serif: 'var(--font-serif)',
   },
 });

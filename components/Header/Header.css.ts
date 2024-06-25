@@ -1,4 +1,4 @@
-import { vars } from '@/styles/theme.css';
+import { helvetica } from '@/styles/theme.css';
 import { style } from '@vanilla-extract/css';
 
 export const header = style({
@@ -10,11 +10,12 @@ export const header = style({
 
 export const nav = style({
   display: 'flex',
-  gap: '1rem',
+  gap: '2rem',
 });
 
 export const navLink = style({
-  fontFamily: vars.font.sans,
+  fontFamily: helvetica,
+  fontSize: '24px',
   textDecoration: 'none',
 });
 

@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={newsreader.className}>{children}</body>
+      <body className={`${newsreader.className}`}>{children}</body>
     </html>
   );
 }
