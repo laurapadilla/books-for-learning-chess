@@ -1,4 +1,4 @@
-import { PortableTextBlock } from 'next-sanity';
+import { PortableTextBlock } from '@portabletext/react';
 
 type Link = {
   title: string;

@@ -22,7 +22,9 @@ export const book = {
     {
       name: 'description',
       of: [
-        { styles: [{ title: 'Indented', value: 'indented' }], type: 'block' },
+        {
+          type: 'block',
+        },
       ],
       title: 'Description',
       type: 'array',

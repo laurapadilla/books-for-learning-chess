@@ -1,3 +1,4 @@
+import { vars } from '@/styles/theme.css';
 import { style } from '@vanilla-extract/css';
 
 export const header = style({
@@ -13,5 +14,6 @@ export const nav = style({
 });
 
 export const navLink = style({
+  fontFamily: vars.font.sans,
   textDecoration: 'none',
 });

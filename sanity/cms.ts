@@ -30,6 +30,7 @@ export async function getBook(slug: string): Promise<Book> {
     bookTitle,
     "slug": slug.current,
     authors,
+    description,
     publisher,
     color,
     "cover": cover.asset->url,
