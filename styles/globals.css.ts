@@ -17,9 +17,15 @@ globalStyle('a', {
 });
 
 export const booksContainer = style({
-  display: 'grid',
-  gap: '1rem',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(255px, 1fr))',
+  '@media': {
+    ['(min-width: 768px)']: {
+      justifyContent: 'unset',
+    },
+  },
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: '1.5rem',
+  justifyContent: 'center',
 });
 
 export const blurbContainer = style({

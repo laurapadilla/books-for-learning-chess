@@ -1,5 +1,10 @@
 import { style } from '@vanilla-extract/css';
 
 export const container = style({
-  padding: '2rem',
+  '@media': {
+    ['(min-width: 768px)']: {
+      padding: '2rem',
+    },
+  },
+  padding: '1rem',
 });

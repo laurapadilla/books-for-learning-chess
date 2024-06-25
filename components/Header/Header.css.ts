@@ -16,12 +16,20 @@ export const nav = style({
 });
 
 export const navLink = style({
+  '@media': {
+    ['(min-width: 768px)']: {
+      fontSize: '24px',
+    },
+  },
   fontFamily: helvetica,
-  fontSize: '24px',
   textDecoration: 'none',
 });
 
 export const title = style({
-  fontSize: '24px',
+  '@media': {
+    ['(min-width: 768px)']: {
+      fontSize: '24px',
+    },
+  },
   textDecoration: 'none',
 });
