@@ -23,7 +23,7 @@ export const booksContainer = style({
 });
 
 export const blurbContainer = style({
-  margin: '2rem 0',
+  margin: '2rem 0 2.5rem 0',
 });
 
 export const blurb = style({
