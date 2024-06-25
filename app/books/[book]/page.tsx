@@ -1,6 +1,7 @@
 import { Book, Container, Header } from '@/components';
 import { getBook, getBooks } from '@/sanity/cms';
 import { PortableText, PortableTextComponents } from '@portabletext/react';
+import { shuffle } from 'lodash';
 import Link from 'next/link';
 import * as styles from './bookPage.css';
 
@@ -21,15 +22,16 @@ export default async function BookPage({ params }: Props) {
   const book = await getBook(slug);
   const books = await getBooks();
 
-  function generateBooks() {
-    return books
-      .filter((b) => b._id !== book._id)
-      .slice(0, 4)
-      .map((b) => (
-        <Link className={styles.otherBooksLink} href={b.slug} key={b._id}>
-          {b.bookTitle}
-        </Link>
-      ));
+  function randomizeBooks() {
+    const shuffledBooks = shuffle(
+      books.filter((b) => b._id !== book._id),
+    ).slice(0, 4);
+
+    return shuffledBooks.map((b) => (
+      <Link className={styles.otherBooksLink} href={b.slug} key={b._id}>
+        {b.bookTitle}
+      </Link>
+    ));
   }
 
   console.log(styles.description);
@@ -65,7 +67,7 @@ export default async function BookPage({ params }: Props) {
         </div>
         <div className={styles.otherBooksList}>
           <h2 className={styles.otherBooksHeading}>Other Books</h2>
-          {generateBooks()}
+          {randomizeBooks()}
         </div>
       </section>
     </Container>

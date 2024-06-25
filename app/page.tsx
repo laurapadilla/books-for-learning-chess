@@ -11,9 +11,9 @@ export default async function Home() {
       <Header />
       <section className={styles.blurbContainer}>
         <h2 className={styles.blurb}>
-          Best books for learning chess is a collection of materials that have
-          been instrumental in my journey as an amateur club chess player. These
-          books were recommended by peers and chess teachers.
+          <strong>Books for learning chess</strong> is a collection of materials
+          that have been instrumental in my journey as an amateur club chess
+          player. These books were recommended by peers and chess teachers.
         </h2>
         <h2 className={styles.blurb}>
           Don’t see your favorite books? Submit them and we’ll add them to the

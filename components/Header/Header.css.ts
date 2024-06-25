@@ -4,6 +4,8 @@ import { style } from '@vanilla-extract/css';
 export const header = style({
   alignItems: 'center',
   display: 'flex',
+  flexWrap: 'wrap',
+  gap: '1.4rem',
   justifyContent: 'space-between',
   marginBottom: '2rem',
 });
