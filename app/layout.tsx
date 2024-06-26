@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       {
         alt: 'Books for learning chess',
         height: 1762,
-        url: './opengraph-image.png',
+        url: 'https://books-for-learning-chess.vercel.app/opengraph-image.png',
         width: 3808,
       },
     ],
