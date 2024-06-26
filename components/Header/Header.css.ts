@@ -1,3 +1,4 @@
+import { mq } from '@/styles/breakpoints';
 import { helvetica } from '@/styles/theme.css';
 import { style } from '@vanilla-extract/css';
 
@@ -17,7 +18,7 @@ export const nav = style({
 
 export const navLink = style({
   '@media': {
-    ['(min-width: 768px)']: {
+    [mq.medium]: {
       fontSize: '24px',
     },
   },
@@ -27,7 +28,7 @@ export const navLink = style({
 
 export const title = style({
   '@media': {
-    ['(min-width: 768px)']: {
+    [mq.medium]: {
       fontSize: '24px',
     },
   },

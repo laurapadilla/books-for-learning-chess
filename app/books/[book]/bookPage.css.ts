@@ -1,3 +1,4 @@
+import { mq } from '@/styles/breakpoints';
 import { style } from '@vanilla-extract/css';
 import { helvetica, vars } from '../../../styles/theme.css';
 
@@ -11,19 +12,29 @@ export const section = style({
 });
 
 export const bookInfoContainer = style({
+  '@media': {
+    [mq.medium]: {
+      gap: '3rem',
+    },
+  },
   display: 'flex',
-  gap: '3rem',
+  flexWrap: 'wrap',
+  gap: '1.5rem',
 });
 
 export const description = style({
   fontSize: '20px',
   lineHeight: '1.2',
-  textIndent: '24px',
+  textIndent: '32px',
 });
 
 export const bookAndLinksContainer = style({
+  '@media': {
+    [mq.large]: {
+      flexDirection: 'column',
+    },
+  },
   display: 'flex',
-  flexDirection: 'column',
   gap: '24px',
 });
 
@@ -38,15 +49,28 @@ export const whereToBuyList = style({
 });
 
 export const portableText = style({
-  maxWidth: '480px',
+  '@media': {
+    [mq.large]: {
+      maxWidth: '480px',
+    },
+  },
   width: '100%',
 });
 
 export const otherBooksList = style({
+  '@media': {
+    [mq.xlarge]: {
+      borderTop: 'none',
+      paddingTop: '0',
+      width: '25%',
+    },
+  },
+  borderTop: '1px solid black',
   display: 'flex',
   flexDirection: 'column',
   gap: '20px',
-  width: '25%',
+  paddingTop: '24px',
+  width: '100%',
 });
 
 export const otherBooksHeading = style({

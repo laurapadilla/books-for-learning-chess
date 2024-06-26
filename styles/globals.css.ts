@@ -37,5 +37,5 @@ export const blurb = style({
   fontSize: '20px',
   lineHeight: '120%',
   maxWidth: '500px',
-  textIndent: '24px',
+  textIndent: '32px',
 });

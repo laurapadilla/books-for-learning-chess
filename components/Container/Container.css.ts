@@ -1,8 +1,9 @@
+import { mq } from '@/styles/breakpoints';
 import { style } from '@vanilla-extract/css';
 
 export const container = style({
   '@media': {
-    ['(min-width: 768px)']: {
+    [mq.medium]: {
       padding: '2rem',
     },
   },
