@@ -57,6 +57,18 @@ export const portableText = style({
   width: '100%',
 });
 
+export const otherBooksContainer = style({
+  display: 'flex',
+  gap: '0.5rem',
+});
+
+export const bookColorDot = style({
+  borderRadius: '100px',
+  height: '15px',
+  marginTop: '4px',
+  width: '15px',
+});
+
 export const otherBooksList = style({
   '@media': {
     [mq.xlarge]: {
@@ -74,10 +86,12 @@ export const otherBooksList = style({
 });
 
 export const otherBooksHeading = style({
+  fontFamily: vars.font.serif,
   fontSize: '24px',
+  fontStyle: 'italic',
 });
 
 export const otherBooksLink = style({
-  fontFamily: vars.font.serif,
+  fontFamily: helvetica,
   fontSize: '20px',
 });

@@ -1,9 +1,7 @@
 import { globalStyle, style } from '@vanilla-extract/css';
 import { helvetica, vars } from './theme.css';
 
-globalStyle('html, body', {
-  WebkitFontSmoothing: 'antialiased',
-});
+globalStyle('html, body', { WebkitFontSmoothing: 'antialiased' });
 
 globalStyle('h1, h2', {
   fontFamily: helvetica,

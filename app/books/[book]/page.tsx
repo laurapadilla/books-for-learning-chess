@@ -28,9 +28,17 @@ export default async function BookPage({ params }: Props) {
     ).slice(0, 4);
 
     return shuffledBooks.map((b) => (
-      <Link className={styles.otherBooksLink} href={b.slug} key={b._id}>
-        {b.bookTitle}
-      </Link>
+      <div className={styles.otherBooksContainer} key={b._id}>
+        <div
+          className={styles.bookColorDot}
+          style={{
+            background: b.color.hex,
+          }}
+        />
+        <Link className={styles.otherBooksLink} href={b.slug}>
+          {b.bookTitle}
+        </Link>
+      </div>
     ));
   }
 
