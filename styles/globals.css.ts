@@ -15,15 +15,10 @@ globalStyle('a', {
 });
 
 export const booksContainer = style({
-  '@media': {
-    ['(min-width: 768px)']: {
-      justifyContent: 'unset',
-    },
-  },
-  display: 'flex',
-  flexWrap: 'wrap',
+  display: 'grid',
   gap: '1.5rem',
-  justifyContent: 'center',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(255px, 1fr))',
+  justifyItems: 'center',
 });
 
 export const blurbContainer = style({

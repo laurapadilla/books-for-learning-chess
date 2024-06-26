@@ -1,3 +1,5 @@
+import { mq } from '@/styles/breakpoints';
+import { booksContainer } from '@/styles/globals.css';
 import { style } from '@vanilla-extract/css';
 
 export const book = style({
@@ -7,7 +9,18 @@ export const book = style({
   justifyContent: 'space-between',
   maxWidth: '255px',
   padding: '1rem',
+  selectors: {
+    [`${booksContainer} &`]: {
+      '@media': {
+        [mq.medium]: {
+          height: '415px',
+          maxWidth: 'none',
+        },
+      },
+    },
+  },
   textDecoration: 'none',
+  width: '100%',
 });
 
 export const bookTitle = style({
