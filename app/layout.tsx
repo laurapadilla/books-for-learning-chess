@@ -14,6 +14,17 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   description:
     'Best books for learning chess and improving your game no matter your rating. These books are idea for beginners, intermediate, and advanced players as well as club players and professionals.',
+  openGraph: {
+    images: [
+      {
+        alt: 'Books for learning chess',
+        height: 1762,
+        url: './opengraph-image.png',
+        width: 3808,
+      },
+    ],
+    url: 'https://books-for-learning-chess.vercel.app',
+  },
   title: 'Books for learning chess',
 };
 
