@@ -16,15 +16,15 @@ export default async function Home() {
           player. These books were recommended by peers and chess teachers.
         </h2>
         <h2 className={styles.blurb}>
-          Don’t see your favorite books? Submit them and we’ll add them to the
-          list!
-        </h2>
-        <h2 className={styles.blurb}>
           This site was built with NextJS and Sanity CMS and inspired by Theo
           van Beurden’s{' '}
           <Link href="https://booksongraphicdesign.com/">
             Books on graphic design.
           </Link>
+        </h2>
+        <h2 className={styles.blurb}>
+          All book descriptions were provided by Amazon and their respective
+          authors and publishers.
         </h2>
       </section>
       <div className={styles.booksContainer}>
