@@ -14,9 +14,6 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   description:
     'Best books for learning chess and improving your game no matter your rating. These books are idea for beginners, intermediate, and advanced players as well as club players and professionals.',
-  openGraph: {
-    images: ['./opengraph-image.png'],
-  },
   title: 'Books for learning chess',
 };
 
