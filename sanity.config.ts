@@ -9,7 +9,7 @@ import { schema } from './sanity/schema';
 
 export default defineConfig({
   basePath: '/studio',
-  dataset,
+  dataset: dataset,
   plugins: [
     colorInput(),
     structureTool(),
@@ -17,5 +17,5 @@ export default defineConfig({
   ],
   projectId,
   schema,
-  useCdn,
+  useCdn: useCdn,
 });
