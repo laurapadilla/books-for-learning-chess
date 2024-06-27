@@ -4,8 +4,8 @@ import { createClient, groq } from 'next-sanity';
 
 const sanityClient = createClient({
   apiVersion: '2024-06-14',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.SANITY_STUDIO_DATASET,
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID,
 });
 
 export async function getBooks(): Promise<Book[]> {
