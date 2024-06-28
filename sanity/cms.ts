@@ -1,11 +1,12 @@
 import { Book } from '@/types/book';
 import { SiteSettings } from '@/types/siteSettings';
 import { createClient, groq } from 'next-sanity';
+import { dataset, projectId } from './env';
 
 const sanityClient = createClient({
   apiVersion: '2024-06-14',
-  dataset: process.env.SANITY_STUDIO_DATASET,
-  projectId: process.env.SANITY_STUDIO_PROJECT_ID,
+  dataset,
+  projectId,
 });
 
 export async function getBooks(): Promise<Book[]> {
