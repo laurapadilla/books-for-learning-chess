@@ -18,7 +18,10 @@ export default async function Home() {
         <h2 className={styles.blurb}>
           This site was built with NextJS and Sanity CMS. Site concept was
           inspired by Theo van Beurden’s{' '}
-          <Link href="https://booksongraphicdesign.com/">
+          <Link
+            aria-label="Link to the website of Books on Graphic Design"
+            href="https://booksongraphicdesign.com/"
+          >
             Books on graphic design.
           </Link>
         </h2>

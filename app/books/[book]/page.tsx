@@ -35,7 +35,11 @@ export default async function BookPage({ params }: Props) {
             background: b.color.hex,
           }}
         />
-        <Link className={styles.otherBooksLink} href={b.slug}>
+        <Link
+          aria-label={b.bookTitle}
+          className={styles.otherBooksLink}
+          href={b.slug}
+        >
           {b.bookTitle}
         </Link>
       </div>
@@ -47,7 +51,9 @@ export default async function BookPage({ params }: Props) {
   return (
     <Container>
       <Header />
-      <Link href="/">{'<'} Back</Link>
+      <Link aria-label="back button to view all books" href="/">
+        {'<'} Back
+      </Link>
       <section className={styles.section}>
         <div className={styles.bookInfoContainer}>
           <div className={styles.bookAndLinksContainer}>
@@ -56,6 +62,7 @@ export default async function BookPage({ params }: Props) {
               {book.whereToBuy
                 ? book.whereToBuy.map((link, idx) => (
                     <Link
+                      aria-label={link.label}
                       className={styles.whereToBuyLink}
                       href={link.url}
                       key={`${link.label}-${idx}`}

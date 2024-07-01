@@ -6,12 +6,17 @@ export async function Header() {
   const siteSettings = await getSiteSettings();
   return (
     <header className={styles.header}>
-      <Link className={styles.title} href="/">
+      <Link aria-label={siteSettings.title} className={styles.title} href="/">
         <h1>{siteSettings.title}</h1>
       </Link>
       <nav className={styles.nav}>
         {siteSettings.navLinks.map((link) => (
-          <Link className={styles.navLink} href={link.url} key={link.url}>
+          <Link
+            aria-label={link.label}
+            className={styles.navLink}
+            href={link.url}
+            key={link.url}
+          >
             {link.label}
           </Link>
         ))}

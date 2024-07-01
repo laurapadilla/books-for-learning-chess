@@ -18,8 +18,12 @@ export const book = style({
         },
       },
     },
+    [`${booksContainer} &:hover`]: {
+      transform: 'scale(1.05)',
+    },
   },
   textDecoration: 'none',
+  transition: 'all 0.3s ease',
   width: '100%',
 });
 

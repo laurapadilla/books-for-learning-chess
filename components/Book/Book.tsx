@@ -18,6 +18,7 @@ export function Book({ book }: BookProps) {
   }
   return (
     <Link
+      aria-label={book.bookTitle}
       className={styles.book}
       href={`/books/${book.slug}`}
       style={{
@@ -35,7 +36,6 @@ export function Book({ book }: BookProps) {
             ))
           : null}
       </div>
-      {/* {book.publisher ? <p>{book.publisher}</p> : null} */}
     </Link>
   );
 }
